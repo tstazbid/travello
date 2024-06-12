@@ -19,6 +19,10 @@ def login(request):
             return redirect('login')
     else:
         return render(request, 'login.html')
+    
+def logout(request):
+    auth.logout(request)
+    return redirect('/')
 
 def register(request):
 
